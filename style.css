@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --clr-white: rgb(255, 255, 255);
+    --clr-purple: rgb(99, 91, 255);
+    --clr-grey: rgb(66, 84, 102);
+    --clr-blue: rgb(10, 37, 64);
+    --clr-black: rgb(58, 58, 58);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f6f9fc;
+    font-family: "Inter", sans-serif;
+    line-height: 1.5;
+    padding-inline: 2rem;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+input {
+    font-family: inherit;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.link {
+    transition: opacity 250ms;
+}
+
+.link:hover {
+    opacity: 0.6;
+}
+
+.link::after {
+    content: ' >';
+}
+
+.button {
+    background-color: var(--button-bg, #FFF);
+    color: #000;
+    padding: 0.5rem 1rem;
+    border-radius: 100vw;
+    transition: opacity 250ms;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    opacity: 0.6;
+}
+
+
+.button-white {
+    --button-bg: var(--clr-white);
+    --button-clr: var(--clr-grey);
+}
+
+.button-blue {
+    --button-bg: var(--clr-blue);
+    --button-clr: var(--clr-white);
+}
+
+.button-purple {
+    --button-bg: var(--clr-purple);
+    --button-clr: var(--clr-white);
+}
+
+.container {
+    max-width: 1200px;
+    /* margin-inline: auto;*/
+}
+
+/* Nav Bar ---------------------------- */
+nav {
+    color: var(--clr-white);
+    display: flex;
+    justify-content: space-between;
+    padding-block: 1rem;
+    margin-inline: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-cta-buttons {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Gradient Background --------------- */
+.gradient-bg::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: calc(100% - 360px);
+    background-color: green;
+    background-image: url(./assets/background.png);
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
+    z-index: -1;
+}
+
+/* Section Hero -------------------- */
+.hero-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding-block: 5rem 7rem;
+    margin-left: auto;
+    max-width: 1420px;
+}
+
+h1 {
+    font-size: 6rem;
+    line-height: 0.9;
+}
+
+.hero-section .content {
+    display: grid;
+    gap: 2rem;
+}
+
+.content-p {
+    color: var(--clr-grey);
+    font-size: 1.2rem;
+}
+
+
+#start-now-form {
+    background-color: white;
+    border: solid 1.5px hsl(0, 0%, 80%);
+    border-radius: 100vw;
+    width: max-content;
+    padding: 0.5rem 1rem;
+    display: flex;
+    gap: 5px;
+}
+
+#start-now-form:active,
+#start-now-form:hover {
+    border: 2px solid rgb(67, 165, 236);
+}
+
+#email {
+    background-color: transparent;
+    border: none;
+}
+
+#email:active,
+#email:focus {
+    outline: none;
+}
+
+.button-blue {
+    color: white;
+}
+
+.brands {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    row-gap: 3rem;
+    margin-inline: auto;
+}
+
+.section2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding-block: 5rem 7rem;
+    margin-left: auto;
+    max-width: 1420px;
+    gap: 3rem;
+    align-items: start;
+}
+
+.subsection {
+    margin-block: 15rem;
+    padding-right: 8.5rem;
+}
+
+h2 {
+    font-size: 3.5rem;
+}
+
+h3 {
+    font-size: 2.5rem;
+}
+
+.style {
+    font-size: 1.2rem;
+    color: var(--clr-grey);
+}
+
+.blue {
+    color: var(--clr-purple);
+}
+
+#blue {
+    color: var(--clr-purple);
+    font-weight: bold;
+}
+
+.button2 {
+    background-color: var(--button-bg, #FFF);
+    color: var(--clr-white);
+    padding: 0.5rem 1rem;
+    border-radius: 100vw;
+    border: none;
+    cursor: pointer;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    font-weight: bold;
+}
+
+.button2:hover {
+    background-color: var(--clr-black);
+}
+
+.subsection p {
+    color: var(--clr-grey);
+}
+
+.see-also {
+    margin-bottom: .6rem;
+}
+
+#image-fixed {
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+}
+
+@media (width > 680px) {
+    .brands {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (width < 1000px) {
+    .hero-section {
+        display: block;
+    }
+}
+
+@media (width <1000px) {
+    .section2 {
+        display: block;
+        margin-left: 5rem;
+    }
+}
